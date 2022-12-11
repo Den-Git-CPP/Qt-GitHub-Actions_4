@@ -1,14 +1,11 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.16)
 
-project (GitHub-Actions_4 VERSION 0.0.1)
+project(main)
 
-add_executable(GitHubActionsCPP 
-main.cpp
-)
+add_executable(main main.cpp)
+
+install(TARGETS main)
 
 enable_testing()
 
-install(TARGETS GitHubActionsCPP RUNTIME DESTINATION bin)
-
-
-
+add_test(NAME main COMMAND main)
